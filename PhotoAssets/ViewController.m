@@ -7,18 +7,29 @@
 //
 
 #import "ViewController.h"
-
+#import "PhotoViewController.h"
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = (CGRect){CGPointMake(50, 90), CGSizeMake(100, 50)};
+    button.backgroundColor = [UIColor blueColor];
+    [button setTitle:@"照片" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(push:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
-
+- (void)push:(UIButton *)button
+{
+    PhotoViewController *photoVC = [[PhotoViewController alloc] init];
+    [self.navigationController pushViewController:photoVC  animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

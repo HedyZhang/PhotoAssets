@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3D65531B38FEBB00B9AA89 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D65521B38FEBB00B9AA89 /* PhotoViewController.m */; };
+		7D3D65561B39008200B9AA89 /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D65551B39008200B9AA89 /* PhotoCollectionCell.m */; };
 		7D77A3061B38FAD400C0D402 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A3051B38FAD400C0D402 /* main.m */; };
 		7D77A3091B38FAD400C0D402 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A3081B38FAD400C0D402 /* AppDelegate.m */; };
 		7D77A30C1B38FAD400C0D402 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A30B1B38FAD400C0D402 /* ViewController.m */; };
@@ -27,6 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D3D65511B38FEBB00B9AA89 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		7D3D65521B38FEBB00B9AA89 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		7D3D65541B39008200B9AA89 /* PhotoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionCell.h; sourceTree = "<group>"; };
+		7D3D65551B39008200B9AA89 /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionCell.m; sourceTree = "<group>"; };
+		7D3D65571B39065500B9AA89 /* PhotoAssets-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoAssets-Prefix.pch"; sourceTree = "<group>"; };
 		7D77A3001B38FAD400C0D402 /* PhotoAssets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoAssets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D77A3041B38FAD400C0D402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D77A3051B38FAD400C0D402 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +92,10 @@
 				7D77A3081B38FAD400C0D402 /* AppDelegate.m */,
 				7D77A30A1B38FAD400C0D402 /* ViewController.h */,
 				7D77A30B1B38FAD400C0D402 /* ViewController.m */,
+				7D3D65511B38FEBB00B9AA89 /* PhotoViewController.h */,
+				7D3D65521B38FEBB00B9AA89 /* PhotoViewController.m */,
+				7D3D65541B39008200B9AA89 /* PhotoCollectionCell.h */,
+				7D3D65551B39008200B9AA89 /* PhotoCollectionCell.m */,
 				7D77A30D1B38FAD400C0D402 /* Main.storyboard */,
 				7D77A3101B38FAD400C0D402 /* Images.xcassets */,
 				7D77A3121B38FAD400C0D402 /* LaunchScreen.xib */,
@@ -98,6 +109,7 @@
 			children = (
 				7D77A3041B38FAD400C0D402 /* Info.plist */,
 				7D77A3051B38FAD400C0D402 /* main.m */,
+				7D3D65571B39065500B9AA89 /* PhotoAssets-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -220,8 +232,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D77A30C1B38FAD400C0D402 /* ViewController.m in Sources */,
+				7D3D65531B38FEBB00B9AA89 /* PhotoViewController.m in Sources */,
 				7D77A3091B38FAD400C0D402 /* AppDelegate.m in Sources */,
 				7D77A3061B38FAD400C0D402 /* main.m in Sources */,
+				7D3D65561B39008200B9AA89 /* PhotoCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +361,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PhotoAssets/PhotoAssets-Prefix.pch";
 				INFOPLIST_FILE = PhotoAssets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +373,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PhotoAssets/PhotoAssets-Prefix.pch";
 				INFOPLIST_FILE = PhotoAssets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +434,7 @@
 				7D77A3251B38FAD400C0D402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D77A3261B38FAD400C0D402 /* Build configuration list for PBXNativeTarget "PhotoAssetsTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +443,7 @@
 				7D77A3281B38FAD400C0D402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

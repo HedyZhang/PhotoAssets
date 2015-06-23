@@ -1,0 +1,32 @@
+//
+//  PhotoAssets-Prefix.pch
+//  PhotoAssets
+//
+//  Created by yanshu on 15/6/23.
+//  Copyright (c) 2015年 yanshu. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+
+#ifndef	weakify
+#if __has_feature(objc_arc)
+#define weakify( x ) autoreleasepool{} \
+                     __attribute__((objc_ownership(weak))) __typeof__(self) self_weak_ = (self)
+#endif
+#endif
+
+#ifndef strongify
+#if __has_feature(objc_arc)
+#define strongify( x ) try {} \
+                      @finally {} \
+                      _Pragma("clang diagnostic push") \
+                    _Pragma("clang diagnostic ignored \"-Wshadow\"") \
+                    __attribute__((objc_ownership(strong))) __typeof__(self) self = self_weak_; \
+                    _Pragma("clang diagnostic pop")
+#endif
+#endif
+
+
+
+#endif
